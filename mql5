@@ -1,0 +1,90 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                EA Pump and Dump  |
+//|                                 Developer's site - forexroboteasy.com |
+//|                                       Development - Forex Robot Easy Team |
+//|                                                  ForexRoboteasy.com  |
+//+------------------------------------------------------------------+
+#property copyright 'Forex Robot Easy Team'
+#property link      'forexroboteasy.com'
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Insert code here to analyze multiple assets simultaneously
+
+   // Check if strong price movements are detected using iPump indicator
+   if (IsStrongPriceMovementDetected())
+   {
+      // Execute trades based on the Pump and Dump strategy
+      if (IsPriceFallDetected())
+      {
+         BuyAssets();
+      }
+      else if (IsPriceRiseDetected())
+      {
+         SellAssets();
+      }
+   }
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+bool IsStrongPriceMovementDetected()
+{
+   // Insert code here to detect strong price movements using iPump indicator
+
+   // Return true if strong price movement is detected, else return false
+   return true;
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+bool IsPriceFallDetected()
+{
+   // Insert code here to detect price fall
+
+   // Return true if price fall is detected, else return false
+   return true;
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+bool IsPriceRiseDetected()
+{
+   // Insert code here to detect price rise
+
+   // Return true if price rise is detected, else return false
+   return true;
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+void BuyAssets()
+{
+   // Insert code here to buy assets at a lower price
+
+   // Code for buying assets
+
+   // Print a message indicating assets have been bought
+   Print('Assets bought at a lower price');
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+void SellAssets()
+{
+   // Insert code here to sell assets at a higher price
+
+   // Code for selling assets
+
+   // Print a message indicating assets have been sold
+   Print('Assets sold at a higher price');
+}
